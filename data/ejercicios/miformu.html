@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Formulario Credenciales</h1>
+    <form name="miformu" action="/autoriza.php" method="get">
+        <p>
+            <label for="nombre">Introduce Nombre:</label>
+            <input type="text" name="nombreusu" id="nombreusu">
+        </p>
+        <p>
+            <label for="password">Introduce la contraseña</label>
+            <input type="password" name="passwd" id="passwd">
+        </p>
+        <p>
+            <p>Elige tu asignatura preferida</p>
+            <label for="asignatura1">PHP</label>
+            <input type="checkbox" name="asignaturas[]" id="asignaturas1" value="PHP">
+            <label for="asignatura2">Python</label>
+            <input type="checkbox" name="asignaturas[]" id="asignaturas2" value="Python">
+            <label for="asignatura3">C</label>
+            <input type="checkbox" name="asignaturas[]" id="asignaturas3" value="C">
+            <label for="asignatura4">JavaScript</label>
+            <input type="checkbox" name="asignaturas[]" id="asignaturas4" value="JavaScript" checked>
+        </p>
+        <p>
+            <p>Elige tu equipo de baloncesto preferido:</p>
+            <input type="radio" name="equipo" id="equipo1" value="Casademont" checked/>
+            <label for="equipo1">Casademont Zaragoza</label>
+            <input type="radio" name="equipo" id="equipo2" value="Burgos"/>
+            <label for="equipo2">San Pablo Burgos</label>
+            <input type="radio" name="equipo" id="equipo3" value="Obradoiro"/>
+            <label for="equipo3">Obradoiro</label>
+        </p>
+        <p>
+            <p>Elige tu plato preferido:</p>
+            <select name="menus" id="menus">
+                <option value="codillo">Codillo Asado</option>
+                <option value="ensalada">Ensalada Cesar</option>
+                <option value="macarrones">Macarrones con tomate</option>
+                <option value="brocoli">Brocoli</option>
+            </select>
+        </p>
+
+        <p>
+            <p>Elige tus platos preferidos: (SELECT MULTIPLE)</p>
+            <select name="menusm[]" id="menusm" multiple="5" required>
+                <option value="codillo">Codillo Asado</option>
+                <option value="ensalada">Ensalada Cesar</option>
+                <option value="macarrones">Macarrones con tomate</option>
+                <option value="brocoli">Brocoli</option>
+            </select>
+        </p>
+        <p><input type="submit" name="envio" id="envio" value="Enviar"></p>
+        
+
+       
+    </form>
+
+</body>
+</html>
