@@ -45,7 +45,6 @@
                 <option value="brocoli">Brocoli</option>
             </select>
         </p>
-
         <p>
             <p>Elige tus platos preferidos: (SELECT MULTIPLE)</p>
             <select name="menusm[]" id="menusm" multiple="5" required>
@@ -55,9 +54,9 @@
                 <option value="brocoli">Brocoli</option>
             </select>
         </p>
-        <p><input type="submit" name="envio" id="envio" value="Enviar"></p>
-        
-
+        <input type="hidden" name="ip" value="<?= $_SERVER['SERVER_ADDR']?>">
+        <input type="submit" name="envio" id="envio" value="Enviar">
+       
        
     </form>
 

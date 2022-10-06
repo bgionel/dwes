@@ -52,7 +52,6 @@
             $menupreferido= $_GET["menus"];
             // Comprobar menus
             if(!empty($_GET['menus'])){
-                $menupreferido = $_GET['menus'];
                 echo "<br> Tu plato preferido es: " . $menupreferido;
             } else {
                 echo "<br><h3> No has introducido ningun plato</h3>";
@@ -69,6 +68,15 @@
             } else {
                 echo "<br><h3> No has introducido ningun plato</h3>";
             }
+    }
+
+    if(isset($_GET['envio'])){
+        $ip = $_GET["ip"];
+        if(!empty($ip)){
+            echo "<br> La ip del servidor es: " . $ip;
+        } else {
+            echo "<br> No se ha podido averiguar la IP.";
+        }
     }
 
     ?>
