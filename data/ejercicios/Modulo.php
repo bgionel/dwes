@@ -22,4 +22,6 @@ class Modulo extends Asignatura {
         . "<br>Numero de creditos: " . $this->getNumCreditos()
         . "<br> Codigo del modulo: " . $this->codigo;
     }
+
+    
 }
