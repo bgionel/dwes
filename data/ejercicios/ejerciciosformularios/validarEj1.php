@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <h1> Registro de un nuevo libro</h1>
+    
     <?php
     if (isset($_GET['envio'])) {
 
