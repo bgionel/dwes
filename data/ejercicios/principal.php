@@ -1,4 +1,4 @@
 <?php
 
 session_start(); 
-echo "<h1>Bienvenido usuario</h1>";
+echo "<h1>Bienvenido usuario</h1>" .  $_SESSION;
