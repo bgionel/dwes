@@ -27,3 +27,4 @@ echo "<br> Producto: " . $_SESSION["producto"];
 
 
 echo "<a href=\"sesion2.php\">Siguiente pagina</a>";
+
