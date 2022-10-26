@@ -19,15 +19,17 @@
         if($_SERVER["REQUEST_METHOD"] === "POST"){ //Si el metodo con el que recojo los datos es post
             if(isset($_POST["envio"])){  //Si esta establecida la variable envio
                 $credentials = comprobarCredenciales($_POST["usuario"],$_POST["password"]); //la funcion devuelve array o falso.
-                if($credentials === false){
-                    $error = 1;
+                if($credentials === false){ // si la comprobacion devuelve falso
+                    $error = 1; //el codigo de error es 1
                 } else {
+                    session_start(); //iniciamos la sesion
+                    $_SESSION["usuariook"] = $credentials;
                     header("Location: principal.php");
                 }
             }
         }
 ?>
-
+<!--este trozo de codigo de arriba solo se ejecuta cuando le das a submit-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -54,7 +56,12 @@
 </head>
 <body>
     <h2>Pagina de acceso</h2>
-  <form name="formulario" action="" method="post">
+    <?php 
+        if(isset($error) && $error == 1){
+            echo "<p><font color=\"red\">Credenciales invalidas.</font></p>";
+        }
+    ?>
+  <form name="formulario" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post">
         <p>
             <label for="nombre">Introduce Usuario: </label>
             <input type="text" name="usuario" id="usuario">
@@ -63,6 +70,7 @@
             <label for="password">Introduce la contraseña: </label>
             <input type="password" name="password" id="password">
         </p>
+        <br>
         <input type="submit" name="envio" id="envio" value="Enviar">
 </body>
 </html>
