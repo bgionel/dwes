@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--Crear web en la que selecciones entre 3 idiomas: español, ingles y aleman
+y  selecciones una marca de coche preferida y muestre el siguiente mensaje
+
+    Bienvenido querido usuario.
+    Welcome dear user.
+    Willkomen Sehr geehrter Nutzer.
+    
+y la marca de coche seleccionada.
+
+    Esta informacion se debe guardar en cookies
+    Si no se selecciona idioma por defecto ser español-->
+</head>
+<body>
+    <form name="miformulario" action="/ejercicioCookies.php" method="post">
+        <p>
+            <label for="espanyol">Español </label>
+            <input type="radio" name="idiomas" id="espanyol" value="Espanyol" checked>
+            <label for="ingles">Ingles </label>
+            <input type="radio" name="idiomas" id="ingles" value="Ingles">
+            <label for="aleman">Aleman </label>
+            <input type="radio" name="idiomas" id="aleman" value="Aleman">
+        </p>
+        <p>
+            <input type="radio" name="coche" id="coche1" value="Volkswagen"/>
+            <label for="coche1">Volkswagen</label>
+            <input type="radio" name="coche" id="coche2" value="Renault"/>
+            <label for="coche2">Renault</label>
+            <input type="radio" name="coche" id="coche3" value="Seat"/>
+            <label for="coche3">Seat</label>
+        </p>
+        <input type="submit" name="envio" id="envio" value="Enviar">
+    </form>
+</body>
+</html>
