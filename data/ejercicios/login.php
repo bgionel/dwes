@@ -23,7 +23,7 @@
                     $error = 1; //el codigo de error es 1
                 } else {
                     session_start(); //iniciamos la sesion
-                    $_SESSION["usuariook"] = $credentials;
+                    $_SESSION["loginok"] = $credentials;
                     header("Location: principal.php");
                 }
             }
@@ -63,7 +63,7 @@
     ?>
   <form name="formulario" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post">
         <p>
-            <label for="nombre">Introduce Usuario: </label>
+            <label for="usuario">Introduce Usuario: </label>
             <input type="text" name="usuario" id="usuario">
         </p>
         <p>
