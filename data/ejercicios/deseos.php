@@ -7,11 +7,21 @@
             $sesioncodif = json_encode($_SESSION); 
             var_dump($sesioncodif);
             //OPCION 1: decodificarlo como un array
-            $sesiondecodif = json_decode($_SESSION,true); 
+            $sesiondecodif = json_decode($sesioncodif,true); //la opción más fácil que hay que usar. 
+            echo "<br><br>";
+            //$S_SESSION["listadeseo"][4]="Porsche";
+
+            //OPCION 2.1: decodificarlos como un objeto
+            $sesiondecodif = json_decode($sesioncodif);
+            $sesiondecodif->{'listadeseo'}[6] = "lampara";
             var_dump($sesiondecodif);
 
-            //OPCION 2: decodificarlos como un objeto
-            $sesiondecodif = json_decode($sesioncodif);
+            //OPCION 2.2
+            $miarray = get_object_vars($sesiondecodif);
+            print_r($miarray);
+            for($i=0 ; $i < count($miarray, COUNT_RECURSIVE) - 1; $i++){
+                echo "<br>Elemento $i es: " . $miarray['listadeseo'][$i];
+            }
         }//if_post
     }//if_server
 
