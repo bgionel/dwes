@@ -1,11 +1,5 @@
 <?php
-    //mysql:dbname=<nombre_bbdd>;host=<ip | nombre>;
-    $dsn = "mysql:dbname=demo;host=db";
-    $usuario = "dbuser";
-    $clave = "secret";
-
-    try{
-        $bd = new PDO($dsn,$usuario,$clave);
+        require"../bbddcon.php";
         $sql = "select nombreusu,password from credenciales";
         $registros = $bd->query($sql);
         echo "<br>Numero de registros devueltos: " . $registros->rowCount();
@@ -17,10 +11,6 @@
         } else {
             echo "<br>No se ha devuelto ninguna fila";
         }
-
-    }catch(PDOException $e){
-        echo "Mensaje de la excepcion : " . $e->getMessage();
-    }
 
     /*
     insertar una nueva fila en credenciales ; usuario2 : error (cifrada)
