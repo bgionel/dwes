@@ -2,7 +2,7 @@
 
 /*
     CONCEPTOS :
-    - Sobreescritra (metodos)
+    - Sobreescritura (metodos)
         -> mismo nombre con mismo numero de parametros, diferente comportamiento
             -> Clase figura -> metodo calcular_area
             -> Clase circulo -> metodo calcular_area
