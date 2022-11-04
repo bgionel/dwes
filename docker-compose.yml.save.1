@@ -9,8 +9,7 @@ services:
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro
       - ./nginx-proxy:/etc/nginx/vhost.d:ro
-      - './conf/my_custom_proxy_settings.conf:/etc/nginx/conf.d/my_custom_proxy_settings.conf:ro'
-    networks:
+      - './conf/my_custom_proxy_settings.conf:/etc/nginx/conf.d/my_custom_proxy_settings.conf:ro'    networks:
       - frontend
   db:
     hostname: db
@@ -36,6 +35,7 @@ services:
       - db
     environment:
       - VIRTUAL_HOST=mvc.local,www.mvc.local
+    restart: always
     networks:
       - frontend
       - backend      
