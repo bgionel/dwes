@@ -1,3 +1,11 @@
+<?php
+    if(!empty($_POST['envio'])){
+        if(!empty($_POST["nombre"])) {
+            header("Location: validarEj12.php");
+        }
+    } 
+        
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,26 +23,13 @@
         </p>
         <input type="submit" name="envio" id="envio" value="Enviar">
         <?php
-            if(isset($_POST)){
-                echo"Variable no definida";
-                if(empty($_POST["nombre"])) {
-                    echo "Introduce tu nombre";
-                }
-            }
         if(!empty($_POST['envio'])){
             if(empty($_POST["nombre"])) {
-                echo "Int";
+            echo "<span style=\"color:red;\">* Debes introducir tu nombre </span>";
             }
         }
-       /* if(isset($_POST) && !empty($_POST)){
-            echo "Recibido!! Mira la URL en tu navegador. Está 'limpia' <hr>";
-            echo "Bienvenido $_POST[nombre]";
-            //var_dump nos puede ayudar a entender lo que hemos recibido
-            echo "<hr><pre>";
-            var_dump($_POST);
-        }*/
+        ?>
         
-    ?>
     </form>
 </body>
 </html>
