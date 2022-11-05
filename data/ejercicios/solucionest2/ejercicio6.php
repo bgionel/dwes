@@ -24,8 +24,9 @@
     </ul>
     <?php 
     //recorro con for el array equipoBasket y voy imprimiendo los jugadores en elementos li junto con su posicion
+    // he creado la variable j ya que los arrays empiezan en 0, pero quiero empezar a contar los jugadores en 1
     for($i = 0 ; $i < count($equipoBasket); $i++){
-        echo "<li> Jugador " . $i . ": " . $equipoBasket[$i] . " </li>";
+        echo "<li> Jugador en la posicion " . $i . ": " . $equipoBasket[$i] . " </li>";
     }
     ?>
     </ul>
