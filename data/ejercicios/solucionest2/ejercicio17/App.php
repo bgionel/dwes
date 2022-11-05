@@ -4,11 +4,12 @@ class App
 {
   public function __construct($name = "Aplicación PHP")
   {
-    // echo "Consturyendo la app <hr>";
+    //definimos los atributos
     $this->name = $name;
-    $this->module = "Desarrollo Web en Entorno Servidor";
-    $this->teacher = "Rafael Cabeza";
-    $this->student = "Fulano De Tal";
+    $this->fibonacci= "Fibonacci";
+    $this->potencias2 = "Potencias de 2";
+    $this->factoriales = "Factoriales";
+    $this->primos = "Primos";
   }
 
   public function run()
