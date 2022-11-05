@@ -14,6 +14,8 @@
     //creo el array equipoBasket con []
     $equipoBasket = ['Lebron James', 'Ricky Rubio', 'Pau Gasol', 'Marc Gasol', 'Stephen Curry']; 
     ?>
+    <!-- Solo necesitamos iterar los elementos li que son los que se van imprimiendo, asi que la etiqueta
+    <ul></ul> va fuera del php-->
     <ul>
     <?php 
     //recorro con foreach el array equipo y voy imprimiendo los jugadores en elementos li

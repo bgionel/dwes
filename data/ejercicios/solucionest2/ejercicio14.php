@@ -27,6 +27,7 @@
         
         //Si se ha enviado la informacion
         if(!empty($_POST['envio'])){
+            // Y el operando1 y operando2 no estan vacios
             if(!empty($_POST['operando1']) && !empty($_POST['operando2'])){
                 /*Recuperamos los valores que se han introducido o seleccionado en el formulario HTML 
                 y los guardamos en las variables $operando1, $operando2, $operador*/
