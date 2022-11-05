@@ -37,7 +37,7 @@
         // Comprobar editorial
         if (!empty($_POST['editorial'])) {
             $editorial = $_POST['editorial'];
-            echo "<br> El editorial es: " . $editorial;
+            echo "<br> La editorial es: " . $editorial;
         } else {
             echo "<br><h3> No has introducido ninguna editorial</h3>";
         }
