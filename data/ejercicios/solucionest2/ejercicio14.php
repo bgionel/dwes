@@ -20,6 +20,7 @@
         </select>
         <!-- Un input con el segundo operando-->
         <input type="text" name="operando2">
+        <?php echo "<br><br>"?>
         <input type="submit" name="envio" id="envio" value="Enviar">
         <?php
         
@@ -44,9 +45,9 @@
                 }else if($operador === "/"){
                     $resultado = $operando1 / $operando2;
                 }
-                echo "<br>El resultado es: " . $resultado;
+                echo "<br><br>El resultado es: " . $resultado;
             }else {
-                echo "<br> <span style=\"color:red;\">Debes introducir dos operandos.</span>";
+                echo "<br><br> <span style=\"color:red;\">Debes introducir dos operandos.</span>";
             }
         } 
     ?>
