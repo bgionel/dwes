@@ -28,6 +28,7 @@
     for($i = 0 ; $i < count($equipoBasket); $i++){
         echo "<li> Jugador en la posicion " . $i . ": " . $equipoBasket[$i] . " </li>";
     }
+
     ?>
     </ul>
 </body>

@@ -1,4 +1,8 @@
 <?php
+    /*
+    Si ya se ha apretado el boton de enviar y se ha introducido un nombre, redirigimos con header
+    a la pagina en la que se saluda al usuario.
+    */
     if(!empty($_POST['envio'])){
         if(!empty($_POST["nombre"])) {
             header("Location: ejercicio12Validar.php");
@@ -14,12 +18,14 @@
     <title>Ejercicio 12</title>
 </head>
 <body>
-    <!--action="autorizaEj12.php"-->
     <h1> Formulario Credenciales</h1>
     <form name="miformu"  method="post">
         <p>
             <label for="nombre">
             <?php
+            /* Si ya se ha apretado el boton de enviar pero no se ha introducido un nombre,
+            aparecera un asterisco rojo delante del campo para escribir el nombre
+            para, mas abajo, explicar que es un campo obligatorio*/
             if(!empty($_POST['envio'])){
                 if(empty($_POST["nombre"])) {
                 echo "<span style=\"color:red;\">* </span>";
@@ -31,9 +37,10 @@
         </p>
         <input type="submit" name="envio" id="envio" value="Enviar">
         <?php
+        /* Aqui se indica con un texto en rojo que el campo es obligatorio*/
         if(!empty($_POST['envio'])){
             if(empty($_POST["nombre"])) {
-            echo "<br><br><span style=\"color:red;\">* Debes introducir tu nombre </span>";
+            echo "<br><br><span style=\"color:red;\">* Campo obligatorio </span>";
             }
         }
         ?>

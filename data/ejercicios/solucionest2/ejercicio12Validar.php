@@ -6,6 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>¡Bienvenido!</h1>
+    <h1>¡Hola, bienvenido/a!</h1>
 </body>
 </html>
